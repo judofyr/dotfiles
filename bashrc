@@ -36,3 +36,5 @@ alias ledger-magnus="~/Documents/Ledger/ledger -f ~/Documents/Ledger/magnus.dat"
 alias ledger-janne="~/Documents/Ledger/ledger -f ~/Documents/Ledger/janne.dat"
 alias ledger-common="~/Documents/Ledger/ledger -f ~/Documents/Ledger/common.dat"
 
+export NODE_PATH="/usr/local/lib/node"
+
