@@ -32,7 +32,7 @@ function mvim() {
 alias mate="mvim"
 alias e="mvim"
 
-alias ledger-magnus="~/ledger/ledger -f ~/ledger/magnus.dat"
-alias ledger-janne="~/ledger/ledger -f ~/ledger/janne.dat"
-alias ledger-common="~/ledger/ledger -f ~/ledger/common.dat"
+alias ledger-magnus="~/Documents/Ledger/ledger -f ~/Documents/Ledger/magnus.dat"
+alias ledger-janne="~/Documents/Ledger/ledger -f ~/Documents/Ledger/janne.dat"
+alias ledger-common="~/Documents/Ledger/ledger -f ~/Documents/Ledger/common.dat"
 
