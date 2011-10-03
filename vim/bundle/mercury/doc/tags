@@ -1,0 +1,13 @@
+:Mmain	mercury.txt	/*:Mmain*
+:Mmake	mercury.txt	/*:Mmake*
+:Mmc	mercury.txt	/*:Mmc*
+:Mmerr	mercury.txt	/*:Mmerr*
+:Mmod	mercury.txt	/*:Mmod*
+Mercury.txt	mercury.txt	/*Mercury.txt*
+mercury-commands	mercury.txt	/*mercury-commands*
+mercury-customisation	mercury.txt	/*mercury-customisation*
+mercury-ftplugin	mercury.txt	/*mercury-ftplugin*
+mercury-install	mercury.txt	/*mercury-install*
+mercury-overview	mercury.txt	/*mercury-overview*
+mercury-syntax	mercury.txt	/*mercury-syntax*
+mercury_commands	mercury.txt	/*mercury_commands*
