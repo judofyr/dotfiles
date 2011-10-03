@@ -30,4 +30,13 @@
   insteadOf = ghs:
 [url "git@github.com:judofyr/"]
   insteadOf = me:
+[url "git@git.nordaaker.com:"]
+  insteadOf = n:
 
+[merge]
+	conflictstyle = diff3
+	tool = opendiff
+[instaweb]
+	httpd = webrick
+[push]
+	default = tracking
