@@ -35,7 +35,6 @@ function mvim() {
   fi
 }
 
-alias mate="mvim"
 alias e="mvim"
 
 alias ledger="~/Documents/Ledger/ledger -f ~/Documents/Ledger/all.dat"
