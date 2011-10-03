@@ -18,7 +18,13 @@ gitprompt() {
 }
 PROMPT_COMMAND=gitprompt 
 
-if [[ -s /Users/magnus/.rvm/scripts/rvm ]] ; then source /Users/magnus/.rvm/scripts/rvm ; fi
+if [[ -s $HOME/.rvm/scripts/rvm ]]; then
+  source $HOME/.rvm/scripts/rvm
+fi
+
+if [[ -s $HOME/.perlbrew/etc/bashrc ]]; then
+  source $HOME/.perlbrew/etc/bashrc
+fi
   
 function mvim() {
   if [ -d "$1" ]; then
@@ -32,9 +38,8 @@ function mvim() {
 alias mate="mvim"
 alias e="mvim"
 
-alias ledger-magnus="~/Documents/Ledger/ledger -f ~/Documents/Ledger/magnus.dat"
-alias ledger-janne="~/Documents/Ledger/ledger -f ~/Documents/Ledger/janne.dat"
-alias ledger-common="~/Documents/Ledger/ledger -f ~/Documents/Ledger/common.dat"
+alias ledger="~/Documents/Ledger/ledger -f ~/Documents/Ledger/all.dat"
+
 
 export NODE_PATH="/usr/local/lib/node"
 
