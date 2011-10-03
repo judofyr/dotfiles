@@ -117,6 +117,8 @@ map <C-l> <C-w>l
 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+map <Leader>g :GundoToggle<CR>
+
 " tell vim to keep a backup file
 set backup
 
