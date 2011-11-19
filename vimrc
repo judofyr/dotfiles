@@ -136,3 +136,6 @@ colorscheme molokai
 cnoreabbrev W w
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 let NERDTreeHijackNetrw = 0
+
+let g:EasyMotion_leader_key = '<Leader>m'
+
