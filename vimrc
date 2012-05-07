@@ -137,3 +137,5 @@ set foldlevelstart=20
 let g:vimwiki_list = [{'path': '~/Google Drive/VimWiki', 'ext': '.txt'}]
 let g:vimwiki_global_ext = 0
 
+nmap <Leader>r :RunLastVimTmuxCommand<CR>
+
