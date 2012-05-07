@@ -117,6 +117,9 @@ cnoreabbrev W w
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 let NERDTreeHijackNetrw = 0
 
+" Selects the recently pasted block
+nmap gp `[v`]
+
 let g:EasyMotion_leader_key = '<Leader>m'
 
 let g:vimwiki_folding = 1
