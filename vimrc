@@ -51,6 +51,10 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+if has("gui_running")
+  set guifont=Menlo:h14
+end
+
 set number
 
 " Only do this part when compiled with support for autocommands.
