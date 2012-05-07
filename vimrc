@@ -46,11 +46,6 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -68,10 +63,7 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-if has("gui_running")
-  set number
-  set guifont=Menlo:h14
-end
+set number
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -101,19 +93,26 @@ else
 
 endif " has("autocmd")
 
+" Comma is the true leader
 let mapleader = ","
 
+" Easy navigation between windows
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Space = shut up
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+" Gundo for history
 map <Leader>g :GundoToggle<CR>
 
-" tell vim to keep a backup file
-set backup
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file
+endif
 
 " tell vim where to put its backup files
 set backupdir=/tmp
