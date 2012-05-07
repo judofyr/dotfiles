@@ -161,3 +161,9 @@ let NERDTreeHijackNetrw = 0
 
 let g:EasyMotion_leader_key = '<Leader>m'
 
+let g:vimwiki_folding = 1
+set foldlevelstart=20
+
+let g:vimwiki_list = [{'path': '~/Google Drive/VimWiki', 'ext': '.txt'}]
+let g:vimwiki_global_ext = 0
+
