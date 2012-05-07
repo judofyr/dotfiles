@@ -10,7 +10,33 @@
 "	    for OpenVMS:  sys$login:.vimrc
 
 " Autoload from .vim/bundles
-call pathogen#runtime_append_all_bundles()
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" Vundle
+filetype on
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Rename'
+Bundle 'Gundo'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'bbommarito/vim-slim'
+Bundle 'tpope/vim-surround'
+Bundle 'benmills/vimux'
+Bundle 'pgr0ss/vimux-ruby-test'
+Bundle 'vimwiki'
+Bundle 'JavaScript-Indent'
+
 filetype plugin indent on
 
 " Soft tabs are two spaces
@@ -21,10 +47,6 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 let g:netrw_altv = 1
 " netrw vertical split window size
 let g:netrw_winsize = 150
-
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
