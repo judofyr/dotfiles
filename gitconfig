@@ -39,4 +39,4 @@
 [instaweb]
 	httpd = webrick
 [push]
-	default = tracking
+	default = upstream
