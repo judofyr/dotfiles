@@ -26,16 +26,17 @@ if [[ -s $HOME/.perlbrew/etc/bashrc ]]; then
   source $HOME/.perlbrew/etc/bashrc
 fi
   
-function mvim() {
+function vim() {
   if [ -d "$1" ]; then
     local dir=$(printf %q "$1")
-    command mvim --cmd ":cd $dir" "$@"
+    command mvim -v --cmd ":cd $dir" "$@"
   else
-    command mvim "$@"
+    command mvim -v "$@"
   fi
 }
 
-alias e="mvim"
+alias e="vim"
+alias vi="vim"
 
 alias ledger="~/Documents/Ledger/ledger -f ~/Documents/Ledger/all.dat"
 
