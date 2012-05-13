@@ -24,6 +24,7 @@ Bundle 'benmills/vimux'
 Bundle 'pgr0ss/vimux-ruby-test'
 Bundle 'vimwiki'
 Bundle 'JavaScript-Indent'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on
 
