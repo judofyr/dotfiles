@@ -134,3 +134,5 @@ let g:vimwiki_global_ext = 0
 
 nmap <Leader>r :RunLastVimTmuxCommand<CR>
 
+let g:ctrlp_switch_buffer = 2
+
