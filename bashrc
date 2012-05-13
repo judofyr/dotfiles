@@ -37,6 +37,7 @@ function vim() {
 
 alias e="vim"
 alias vi="vim"
+export EDITOR="mvim -v"
 
 alias ledger="~/Documents/Ledger/ledger -f ~/Documents/Ledger/all.dat"
 
