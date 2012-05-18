@@ -22,9 +22,11 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'tpope/vim-surround'
 Bundle 'benmills/vimux'
 Bundle 'pgr0ss/vimux-ruby-test'
-Bundle 'vimwiki'
 Bundle 'JavaScript-Indent'
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-pathogen'
+
+call pathogen#infect('pathogen')
 
 filetype plugin indent on
 
