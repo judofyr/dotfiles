@@ -34,4 +34,7 @@ Bundle 'ervandew/supertab'
 " History
 Bundle 'sjl/gundo.vim'
 
+" My little todo manager
+Bundle 'judofyr/willdo'
+
 filetype plugin indent on
