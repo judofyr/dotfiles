@@ -1,11 +1,11 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Use Pathogen for local plugins that are not on GitHub
+execute pathogen#infect('local-bundle/{}')
 
-" Manage Vundle with Vundle
-Bundle 'gmarik/vundle'
+" Use Vundle for everything else
+call vundle#rc()
 
 Bundle 'godlygeek/tabular'
 
