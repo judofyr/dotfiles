@@ -13,3 +13,8 @@ nmap <C-c> <Esc>
 
 source ~/.vim/python.vim
 
+let s:local = expand($HOME . '/.vimrc.local')
+if filereadable(s:local)
+  exe ':source ' . s:local
+end
+
