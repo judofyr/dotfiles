@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -e
-SELF=$(readlink "${BASH_SOURCE[0]}")
+SELF=${BASH_SOURCE[0]}
+
+if LINKSELF=$(readlink "$SELF"); then
+  SELF="$LINKSELF"
+fi
+
 DIR="$(cd "$(dirname "$SELF")" && pwd)"
 LINKED="$DIR/.linked"
 
