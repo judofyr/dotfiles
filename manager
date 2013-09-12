@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+set -e
+SELF=$(readlink "${BASH_SOURCE[0]}")
+DIR="$(cd "$(dirname "$SELF")" && pwd)"
+LINKED="$DIR/.linked"
+
+CMD="$1"
+
+case "$CMD" in
+  link)
+    if [ $# -lt 2 ]; then
+      echo "Usage: $0 link NAME [TARGET]"
+      exit 1
+    fi
+
+    source="$DIR/$2"
+    if [ $# -eq 2 ]; then
+      target="$HOME/.$2"
+    else
+      target="$HOME/$3"
+    fi
+
+    if [ -e "$target" ]; then
+      echo "$target already exists. Aborting."
+      exit 2
+    fi
+
+    if [ ! -e "$source" ]; then
+      echo "$source doesn't exists. Aborting."
+      exit 2
+    fi
+
+    ln -s "$source" "$target"
+    echo "$3" >> "$LINKED"
+    ;;
+  linked)
+    cat "$LINKED" 2>/dev/null
+    ;;
+  rm)
+    if [ $# -lt 2 ]; then
+      echo "Usage: $0 rm TARGET"
+      exit 1
+    fi
+
+    cat "$LINKED" | grep -Fxv "$2" > "$LINKED.new"
+    if cmp --silent "$LINKED" "$LINKED.new"; then
+      echo "$2 was not linked with dotfile manager. Aborting."
+      rm "$LINKED.new"
+      exit 2
+    fi
+
+    rm -f "$HOME/$2"
+    mv "$LINKED.new" "$LINKED"
+    ;;
+  ls)
+    ls -1 "$DIR" | grep -Fxv manager
+    ;;
+  *)
+    echo "Usage: $0 {link|linked|ls|rm}"
+  ;;
+esac
