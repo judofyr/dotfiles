@@ -21,6 +21,16 @@ nmap gp `[v`]
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
+" Easy navigation between windows
+if exists('$TMUX')
+  source ~/.vim/tmux.vim
+else
+  map <C-h> <C-w>h
+  map <C-j> <C-w>j
+  map <C-k> <C-w>k
+  map <C-l> <C-w>l
+endif
+
 source ~/.vim/python.vim
 
 let s:local = expand($HOME . '/.vimrc.local')
