@@ -18,25 +18,27 @@ case "$CMD" in
       exit 1
     fi
 
-    source="$DIR/$2"
+    source_path="$DIR/$2"
+
     if [ $# -eq 2 ]; then
-      target="$HOME/.$2"
+      target=".$2"
     else
-      target="$HOME/$3"
+      target="$3"
     fi
+    target_path="$HOME/$target"
 
-    if [ -e "$target" ]; then
-      echo "$target already exists. Aborting."
+    if [ -e "$target_path" ]; then
+      echo "$target_path already exists. Aborting."
       exit 2
     fi
 
-    if [ ! -e "$source" ]; then
-      echo "$source doesn't exists. Aborting."
+    if [ ! -e "$source_path" ]; then
+      echo "$source_path doesn't exists. Aborting."
       exit 2
     fi
 
-    ln -s "$source" "$target"
-    echo "$3" >> "$LINKED"
+    ln -s "$source_path" "$target_path"
+    echo "$target" >> "$LINKED"
     ;;
   linked)
     cat "$LINKED" 2>/dev/null
