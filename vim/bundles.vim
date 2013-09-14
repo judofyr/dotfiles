@@ -17,6 +17,8 @@ Bundle 'tpope/vim-fugitive'
 
 Bundle 'tpope/vim-surround'
 
+Bundle 'tpope/vim-rails'
+
 " Listing files
 if version > 700
   Bundle 'Shougo/unite.vim'
