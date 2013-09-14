@@ -18,6 +18,9 @@ nmap <C-c> <Esc>
 " Selects the recently pasted block
 nmap gp `[v`]
 
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 source ~/.vim/python.vim
 
 let s:local = expand($HOME . '/.vimrc.local')
