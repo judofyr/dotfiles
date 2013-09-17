@@ -62,7 +62,17 @@ case "$CMD" in
   ls)
     ls -1 "$DIR" | grep -Fxv manager
     ;;
+  pull)
+    cd "$DIR"
+    shift
+    git pull "$@"
+    ;;
+  push)
+    cd "$DIR"
+    shift
+    git push "$@"
+    ;;
   *)
-    echo "Usage: $0 {link|linked|ls|rm}"
+    echo "Usage: $0 {link|linked|ls|rm|pull|push}"
   ;;
 esac
