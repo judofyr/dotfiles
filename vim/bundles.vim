@@ -19,6 +19,8 @@ Bundle 'tpope/vim-surround'
 
 Bundle 'tpope/vim-rails'
 
+Bundle 'plasticboy/vim-markdown'
+
 " Listing files
 if version > 700
   Bundle 'Shougo/unite.vim'
