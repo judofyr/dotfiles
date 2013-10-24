@@ -31,6 +31,8 @@ else
   map <C-l> <C-w>l
 endif
 
+" Unite!
+source ~/.vim/unite.vim
 source ~/.vim/python.vim
 
 let s:local = expand($HOME . '/.vimrc.local')
