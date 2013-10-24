@@ -42,4 +42,7 @@ Bundle 'sjl/gundo.vim'
 " My little todo manager
 Bundle 'judofyr/willdo'
 
+" Better startup screen
+Bundle 'mhinz/vim-startify'
+
 filetype plugin indent on
