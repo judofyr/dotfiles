@@ -45,4 +45,7 @@ Bundle 'judofyr/willdo'
 " Better startup screen
 Bundle 'mhinz/vim-startify'
 
+" Calendar
+Bundle 'mattn/calendar-vim'
+
 filetype plugin indent on
