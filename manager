@@ -60,7 +60,7 @@ case "$CMD" in
     mv "$LINKED.new" "$LINKED"
     ;;
   ls)
-    ls -1 "$DIR" | grep -Fxv manager
+    ls -1 "$DIR"
     ;;
   edit)
     cd "$DIR"
@@ -70,6 +70,9 @@ case "$CMD" in
   pull|push|diff|status|add|commit)
     cd "$DIR"
     git "$@"
+    ;;
+  commands)
+    echo edit link linked ls rm pull push diff status add commit
     ;;
   *)
     echo "Usage: $0 {link|linked|ls|rm}"
