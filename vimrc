@@ -18,6 +18,9 @@ nmap <C-c> <Esc>
 " Selects the recently pasted block
 nmap gp `[v`]
 
+" Default to having all folds unfolded
+set foldlevel=99
+
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
