@@ -22,3 +22,19 @@ for file in $HOME/.bash_completion.d/*; do
   test -f "$file" && . "$file"
 done
 
+## Prompt
+function minutes_since_last_commit {
+  local now=`date +%s`
+  local last_commit=`git log --pretty=format:'%at' -1 2> /dev/null`
+  local seconds_since_last_commit=$((now-last_commit))
+  local minutes_since_last_commit=$((seconds_since_last_commit/60))
+  echo $minutes_since_last_commit
+}
+
+gitprompt() {
+  if [ $ret ] && [ $ret -ne 0 ]; then
+    local RET="[$ret]\n"
+  fi
+  PS1="\[\e[0;31m\]$RET\W$(__git_ps1 " \[\e[1;31m\](%s - $(minutes_since_last_commit)m)") \$ \[\e[m\]"
+}
+
