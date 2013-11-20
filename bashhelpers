@@ -4,14 +4,14 @@ alias gc="git commit"
 alias gl="git log"
 alias t="tmux attach-session -t"
 
-VIM="${VIM:-vim}"
+VIMBIN="${VIMBIN:-vim}"
 
 function vim() {
   if [ -d "$1" ]; then
     local dir=$(printf %q "$1")
-    command $VIM --cmd ":cd $dir" "$@"
+    command $VIMBIN --cmd ":cd $dir" "$@"
   else
-    command $VIM "$@"
+    command $VIMBIN "$@"
   fi
 }
 
