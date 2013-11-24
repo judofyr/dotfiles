@@ -12,6 +12,10 @@ LINKED="$DIR/.linked"
 CMD="$1"
 
 case "$CMD" in
+  pwd)
+    echo "$DIR"
+    ;;
+
   link)
     if [ $# -lt 2 ]; then
       echo "Usage: $0 link NAME [TARGET]"
