@@ -5,7 +5,8 @@ _dfm() {
 
   case "$prev" in
     edit|link|add)
-      words=`dfm ls`
+      COMPREPLY=( $(cd "`dfm pwd`"; compgen -f -- $cur) )
+      return
       ;;
     rm)
       words=`dfm linked`
