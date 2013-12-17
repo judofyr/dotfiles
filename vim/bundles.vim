@@ -48,4 +48,7 @@ Bundle 'mhinz/vim-startify'
 " Calendar
 Bundle 'mattn/calendar-vim'
 
+" Go
+Bundle 'jnwhiteh/vim-golang'
+
 filetype plugin indent on
