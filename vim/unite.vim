@@ -6,6 +6,14 @@ nnoremap <leader>y :Unite -no-split -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :Unite -no-split -buffer-name=buffer  buffer<cr>
 nnoremap <leader>s :Unite -no-split -buffer-name=search  grep<cr>
 
+let eqaction = {}
+function! eqaction.func(candidate)
+  let path = unite#util#substitute_path_separator(fnamemodify(a:candidate.action__path, ':~:.'))
+  call editquickly#open(path)
+endfunction
+
+call unite#custom#action('file', 'eq', eqaction)
+
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup'
