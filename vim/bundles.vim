@@ -51,4 +51,7 @@ Bundle 'mattn/calendar-vim'
 " Go
 Bundle 'jnwhiteh/vim-golang'
 
+" JavaScript
+Bundle 'pangloss/vim-javascript'
+
 filetype plugin indent on
