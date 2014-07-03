@@ -5,6 +5,7 @@ nnoremap <leader>r :Unite -no-split -buffer-name=mru     -start-insert file_mru<
 nnoremap <leader>y :Unite -no-split -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :Unite -no-split -buffer-name=buffer  buffer<cr>
 nnoremap <leader>s :Unite -no-split -buffer-name=search  grep<cr>
+nnoremap <leader>o :Unite -vertical -winwidth=50 -no-quit -buffer-name=outline   outline<cr>
 
 let eqaction = {}
 function! eqaction.func(candidate)

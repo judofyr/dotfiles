@@ -24,6 +24,7 @@ Bundle 'plasticboy/vim-markdown'
 " Listing files
 if version > 700
   Bundle 'Shougo/unite.vim'
+  Bundle 'h1mesuke/unite-outline'
   Bundle 'Shougo/vimproc.vim'
 end
 
