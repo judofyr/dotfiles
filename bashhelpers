@@ -9,7 +9,7 @@ VIMBIN="${VIMBIN:-vim}"
 function vim() {
   if [ -d "$1" ]; then
     local dir=$(printf %q "$1")
-    command $VIMBIN --cmd ":cd $dir" "$@"
+    command $VIMBIN +":cd $dir" +":e ."
   else
     command $VIMBIN "$@"
   fi
