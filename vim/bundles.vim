@@ -55,4 +55,10 @@ Bundle 'jnwhiteh/vim-golang'
 " JavaScript
 Bundle 'pangloss/vim-javascript'
 
+" Ledger
+Bundle 'ledger/vim-ledger'
+
+" Rust
+Bundle 'wting/rust.vim'
+
 filetype plugin indent on
