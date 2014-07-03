@@ -1,64 +1,73 @@
 set nocompatible
-filetype off
 
 " Use Pathogen for local plugins that are not on GitHub
 execute pathogen#infect('local-bundle/{}')
 
-" Use Vundle for everything else
-call vundle#rc()
+" Use NeoBundle for everything else
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-Bundle 'godlygeek/tabular'
+NeoBundle 'godlygeek/tabular'
 
 " Sensible defaults
-Bundle 'tpope/vim-sensible'
+NeoBundle 'tpope/vim-sensible'
 
 " Git
-Bundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 
-Bundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
 
-Bundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rails'
 
-Bundle 'plasticboy/vim-markdown'
+NeoBundle 'plasticboy/vim-markdown'
 
 " Listing files
 if version > 700
-  Bundle 'Shougo/unite.vim'
-  Bundle 'h1mesuke/unite-outline'
-  Bundle 'Shougo/vimproc.vim'
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'h1mesuke/unite-outline'
+  NeoBundle 'Shougo/vimproc.vim', {
+    \   'build': {
+    \     'mac': 'make -f make_mac.mak',
+    \     'unix': 'make -f make_unix.mak',
+    \   },
+    \ }
 end
 
 " Better status/tabbar
-Bundle 'bling/vim-airline'
+NeoBundle 'bling/vim-airline'
 
 " Colors!
-Bundle 'tomasr/molokai'
+NeoBundle 'tomasr/molokai'
 
-Bundle 'Rename'
-Bundle 'ervandew/supertab'
+NeoBundle 'Rename'
+NeoBundle 'ervandew/supertab'
 
 " History
-Bundle 'sjl/gundo.vim'
+NeoBundle 'sjl/gundo.vim'
 
 " My little todo manager
-Bundle 'judofyr/willdo'
+NeoBundle 'judofyr/willdo'
 
 " Better startup screen
-Bundle 'mhinz/vim-startify'
+NeoBundle 'mhinz/vim-startify'
 
 " Calendar
-Bundle 'mattn/calendar-vim'
+NeoBundle 'mattn/calendar-vim'
 
 " Go
-Bundle 'jnwhiteh/vim-golang'
+NeoBundle 'jnwhiteh/vim-golang'
 
 " JavaScript
-Bundle 'pangloss/vim-javascript'
+NeoBundle 'pangloss/vim-javascript'
 
 " Ledger
-Bundle 'ledger/vim-ledger'
+NeoBundle 'ledger/vim-ledger'
 
 " Rust
-Bundle 'wting/rust.vim'
+NeoBundle 'wting/rust.vim'
+
+call neobundle#end()
 
 filetype plugin indent on
+
+NeoBundleCheck
+
