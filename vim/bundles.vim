@@ -47,9 +47,6 @@ NeoBundle 'sjl/gundo.vim'
 " My little todo manager
 NeoBundle 'judofyr/willdo'
 
-" Better startup screen
-NeoBundle 'mhinz/vim-startify'
-
 " Calendar
 NeoBundle 'mattn/calendar-vim'
 
