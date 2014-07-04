@@ -21,6 +21,8 @@ nmap gp `[v`]
 " Default to having all folds unfolded
 set foldlevel=99
 
+set directory=/tmp//
+
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
