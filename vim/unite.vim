@@ -1,4 +1,6 @@
 let g:unite_source_history_yank_enable = 1
+let g:unite_abbr_highlight = 'Normal'
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>t :Unite -no-split -buffer-name=files   -start-insert file_rec<cr>
 nnoremap <leader>r :Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
