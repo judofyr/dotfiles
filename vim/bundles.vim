@@ -13,6 +13,7 @@ NeoBundle 'tpope/vim-sensible'
 
 " Git
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'AndrewRadev/gapply.vim'
 
 NeoBundle 'tpope/vim-surround'
 
