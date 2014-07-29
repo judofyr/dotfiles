@@ -36,9 +36,6 @@ end
 " Better status/tabbar
 NeoBundle 'bling/vim-airline'
 
-" Better scrolling
-NeoBundle 'terryma/vim-smooth-scroll'
-
 " Colors!
 NeoBundle 'tomasr/molokai'
 
