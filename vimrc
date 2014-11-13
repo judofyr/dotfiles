@@ -15,6 +15,9 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " Just alias Ctrl-C to Escape. No one cares about the difference
 nmap <C-c> <Esc>
 
+nmap <Right> :tabnext<cr>
+nmap <Left> :tabprev<cr>
+
 " Selects the recently pasted block
 nmap gp `[v`]
 
