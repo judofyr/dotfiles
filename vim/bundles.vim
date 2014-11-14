@@ -3,69 +3,67 @@ set nocompatible
 " Use Pathogen for local plugins that are not on GitHub
 execute pathogen#infect('local-bundle/{}')
 
-" Use NeoBundle for everything else
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Use vim-plug for everything else
+call plug#begin('~/.vim/bundle')
 
-NeoBundle 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
 " Sensible defaults
-NeoBundle 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 
 " Git
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'AndrewRadev/gapply.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'AndrewRadev/gapply.vim'
 
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
-NeoBundle 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 
-NeoBundle 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 
 " Listing files
 if version > 700
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'h1mesuke/unite-outline'
-  NeoBundle 'Shougo/vimproc.vim', {
-    \   'build': {
-    \     'mac': 'make -f make_mac.mak',
-    \     'unix': 'make -f make_unix.mak',
-    \   },
-    \ }
+  Plug 'Shougo/unite.vim'
+  Plug 'h1mesuke/unite-outline'
+
+  if has('mac')
+    let g:vimproc_do = 'make -f make_mac.mak'
+  else
+    let g:vimproc_do = 'make -f make_unix.mak'
+  endif
+
+  Plug 'Shougo/vimproc.vim', { 'do': g:vimproc_do }
 end
 
 " Better status/tabbar
-NeoBundle 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " Colors!
-NeoBundle 'tomasr/molokai'
+Plug 'tomasr/molokai'
 
-NeoBundle 'Rename'
-NeoBundle 'ervandew/supertab'
+Plug 'Rename'
+Plug 'ervandew/supertab'
 
 " History
-NeoBundle 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 
 " My little todo manager
-NeoBundle 'judofyr/willdo'
+Plug 'judofyr/willdo'
 
 " Calendar
-NeoBundle 'mattn/calendar-vim'
+Plug 'mattn/calendar-vim'
 
 " Go
-NeoBundle 'jnwhiteh/vim-golang'
+Plug 'jnwhiteh/vim-golang'
 
 " JavaScript
-NeoBundle 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 
 " Ledger
-NeoBundle 'ledger/vim-ledger'
+Plug 'ledger/vim-ledger'
 
 " Rust
-NeoBundle 'wting/rust.vim'
+Plug 'wting/rust.vim'
 
-call neobundle#end()
-
-filetype plugin indent on
-
-NeoBundleCheck
+call plug#end()
 
