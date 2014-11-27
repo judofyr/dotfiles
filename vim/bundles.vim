@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'AndrewRadev/gapply.vim'
 
 Plug 'tpope/vim-surround'
+Plug 'arkwright/vim-shotput'
 
 Plug 'tpope/vim-rails'
 
