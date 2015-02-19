@@ -20,7 +20,7 @@ Plug 'arkwright/vim-shotput'
 
 Plug 'tpope/vim-rails'
 
-Plug 'plasticboy/vim-markdown'
+Plug 'tpope/vim-markdown'
 
 " Listing files
 if version > 700
