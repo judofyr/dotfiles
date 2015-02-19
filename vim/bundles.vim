@@ -57,6 +57,8 @@ Plug 'mattn/calendar-vim'
 " Go
 Plug 'jnwhiteh/vim-golang'
 
+Plug 'zah/nimrod.vim'
+
 " JavaScript
 Plug 'pangloss/vim-javascript'
 
