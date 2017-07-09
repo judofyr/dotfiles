@@ -30,5 +30,8 @@ Plug 'ervandew/supertab'
 " History
 Plug 'sjl/gundo.vim'
 
+" Toml
+Plug 'cespare/vim-toml'
+
 call plug#end()
 
