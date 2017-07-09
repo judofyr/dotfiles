@@ -38,3 +38,14 @@ gitprompt() {
   PS1="\[\e[0;31m\]$RET\W$(__git_ps1 " \[\e[1;31m\](%s - $(minutes_since_last_commit)m)") \$ \[\e[m\]"
 }
 
+## Mess
+mess-dir() {
+  local yearweek=$(date +%Y/%W)
+  local withmonth=$(date -j -f %Y/%W "$yearweek" +%Y/%W-%B)
+  local dir="$HOME/Mess/$withmonth"
+  mkdir -p "$dir"
+  echo "$dir"
+}
+
+alias mess='cd $(mess-dir)'
+
